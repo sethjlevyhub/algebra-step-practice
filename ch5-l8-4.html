@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ch 5 Lesson 8 #4 · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+// ===== PROBLEM DATA (swap this object for a new problem) =====
+const D = (o) => diagram(o);
+window.PROBLEM = {
+  id: "ch5-l8-4", chapter: "Chapter 5", lesson: "Lesson 8", number: "Set II, #4",
+  title: "Daisy Catches Up",
+  text: "Daisy and her boyfriend, Alf Kerazy, decide to have a bicycle race. Because the rates at which Daisy and Alf can ride are 720 and 660 meters per minute, respectively, Alf is given a headstart of two minutes. If Daisy catches up with Alf in <b>x</b> minutes, how long does it take Daisy to catch up, and how far has each one gone?",
+  tracker: ["Picture","Table","Link","Equation","Solve","Check"],
+  steps: [
+    { label:"Picture", q:"Which line diagram matches the story?", correct:2,
+      choices:[
+        {html:D({mode:"opposite"}), why:"This shows them riding <b>toward each other</b> from opposite ends. In this race they ride the <b>same direction</b> from the same start line."},
+        {html:D({mode:"short"}), why:"Here Daisy's line stops before Alf's, so she never catches him. At the catch-up moment they are at the <b>same spot</b>, so the lines must end together."},
+        {html:D({mode:"right"}), why:""},
+        {html:D({mode:"swap"}), why:"The labels are swapped. <b>Daisy</b> rides 720 m/min for x minutes (720x). <b>Alf</b> rides 660 m/min for x + 2 minutes."}],
+      right:"Both start at the same line, ride the same way, and end at the <b>same spot</b> when Daisy catches Alf. Alf's distance is 660(x + 2) and Daisy's is 720x."},
+    { label:"Table", q:"Which Rate | Time | Distance table is set up right?", correct:0,
+      choices:[
+        {html:tbl([["Alf","660","x + 2","660(x + 2)"],["Daisy","720","x","720x"]]), why:""},
+        {html:tbl([["Alf","720","x + 2","720(x + 2)"],["Daisy","660","x","660x"]]), why:"The <b>rates are swapped</b>. The problem says Daisy and Alf ride 720 and 660 “respectively,” so Daisy is 720 and Alf is 660."},
+        {html:tbl([["Alf","660","x","660x"],["Daisy","720","x + 2","720(x + 2)"]]), why:"The <b>head start went to the wrong person</b>. Alf got the 2-minute head start, so Alf rides longer: x + 2."},
+        {html:tbl([["Alf","660","x − 2","660(x − 2)"],["Daisy","720","x","720x"]]), why:"A head start means Alf rides <b>2 minutes more</b>, not 2 less. His time is x + 2."}],
+      right:"Daisy rides 720 m/min for x minutes. Alf rides 660 m/min and started 2 minutes earlier, so he rides <b>x + 2</b> minutes. Distance = rate × time in each row."},
+    { label:"Link", q:"When Daisy catches up with Alf, what is equal?", correct:3,
+      choices:[
+        {html:"Their distances <b>add up</b> to a total", why:"Distances add when people travel <b>toward each other</b> or apart. Here they ride the same road in the same direction, and no total is given."},
+        {html:"Their <b>times</b> are equal", why:"Their times are <b>not</b> equal. Alf rode 2 minutes longer because of his head start."},
+        {html:"Their <b>rates</b> are equal", why:"Their speeds are different (720 vs 660). That difference is exactly why Daisy can catch up."},
+        {html:"Their <b>distances</b> are equal", why:""}],
+      right:"They started at the same line and are at the same spot when she catches him, so they have gone the <b>same distance</b>."},
+    { label:"Equation", q:"Which equation fits the table and the link?", correct:1,
+      choices:[
+        {html:"720(x + 2) = 660x", why:"This gives the extra 2 minutes to <b>Daisy</b>. Alf had the head start, so the (x + 2) goes with 660."},
+        {html:"720x = 660(x + 2)", why:""},
+        {html:"720x = 660x + 2", why:"The 2 has to be multiplied by 660 too, so you need <b>parentheses</b>: 660(x + 2) = 660x + 1320."},
+        {html:"720x + 660(x + 2) = 0", why:"Adding the distances is for problems where they move toward each other. Here the distances are <b>equal</b>, so set them equal."}],
+      right:"Daisy's distance = Alf's distance, so <b>720x = 660(x + 2)</b>."},
+    { label:"Solve", q:"Solve it. How long does Daisy take, and how far has each gone?", correct:2,
+      choices:[
+        {html:"x = 11 min; each 7,920 m", why:"60x = 1320 means x = 1320 ÷ <b>60</b>, not ÷ 120. Then x = 22."},
+        {html:"x = 24 min; each 17,280 m", why:"24 minutes is <b>Alf's</b> time (x + 2). The question asks for x, Daisy's time. With x = 24 the distances don't match: 720·24 = 17,280 but 660·26 = 17,160."},
+        {html:"x = 22 min; each 15,840 m", why:""},
+        {html:"x = 22 min; each 14,520 m", why:"x = 22 is right, but 14,520 = 660·22 leaves out Alf's head start. Alf rode 22 + 2 = 24 minutes: 660·24 = 15,840 m."}],
+      right:"720x = 660x + 1320 → 60x = 1320 → <b>x = 22</b>. Check: Daisy 720·22 = <b>15,840 m</b>; Alf 660·24 = <b>15,840 m</b>. Same distance ✔"}
+  ],
+  solution: [
+    "Let x = minutes Daisy rides. Alf rides x + 2 (2-minute head start).",
+    "Daisy: 720 · x = 720x &nbsp;&nbsp; Alf: 660 · (x + 2) = 660(x + 2)",
+    "Catch-up means same distance: 720x = 660(x + 2)",
+    "720x = 660x + 1320 → 60x = 1320 → x = 22",
+    "Daisy catches up in <b>22 minutes</b> (Alf has ridden 24 minutes).",
+    "Check: 720 · 22 = 15,840 m and 660 · 24 = 15,840 m. Each has gone <b>15,840 meters</b>. ✔"
+  ]
+};
+// ===== helpers =====
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+function diagram({mode}){
+  const A="#D2693C",B="#2F7F95";
+  const arrow=(x1,x2,y,c,lab,name)=>{const dir=x2>x1?1:-1;return `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${c}" stroke-width="4"/><line x1="${x1}" y1="${y-9}" x2="${x1}" y2="${y+9}" stroke="${c}" stroke-width="3"/><polygon points="${x2},${y} ${x2-12*dir},${y-7} ${x2-12*dir},${y+7}" fill="${c}"/><text x="${(x1+x2)/2}" y="${y-12}" fill="${c}" font-size="17" text-anchor="middle" font-weight="600">${lab}</text><text x="${Math.min(x1,x2)-6}" y="${y+6}" font-size="15" text-anchor="end" fill="#1E2422">${name}</text>`};
+  let s="";
+  if(mode==="right") s=arrow(60,290,35,A,"660(x + 2)","Alf")+arrow(60,290,85,B,"720x","Daisy");
+  if(mode==="short") s=arrow(60,290,35,A,"660(x + 2)","Alf")+arrow(60,200,85,B,"720x","Daisy");
+  if(mode==="swap") s=arrow(60,290,35,A,"720x","Alf")+arrow(60,290,85,B,"660(x + 2)","Daisy");
+  if(mode==="opposite") s=arrow(60,175,35,A,"660(x + 2)","Alf")+`<text x="300" y="91" font-size="15" text-anchor="start" fill="#1E2422"></text>`+arrow(290,180,85,B,"720x","Daisy");
+  return `<svg viewBox="0 0 310 105" class="dg" role="img" aria-label="line diagram">${s}</svg>`;
+}
+</script>
+<script src="engine.js"></script></body></html>
