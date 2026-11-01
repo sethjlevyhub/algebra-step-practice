@@ -2,11 +2,11 @@
 const P=window.PROBLEM, app=document.getElementById("app"), N=P.steps.length;
 let i=0, results=[];
 function tracker(){return `<div class="tracker">${P.tracker.map((t,k)=>{let c=k<N&&results[k]!=null?(results[k]?"done":"miss"):"";if(k===i)c="on";if(i>=N&&k===N)c="on";return `<div class="${c}">${k+1}. ${t}</div>`}).join("")}</div>`}
-function head(){return `<div class="kicker">${P.chapter} · ${P.lesson} · ${P.number}</div><h1>${P.title}</h1><div class="prob">${P.text}</div>`}
+function head(){return `<div class="kicker">${P.chapter} · ${P.lesson} · ${P.number}</div><h1>${P.title}</h1><section class="card prob"><div class="lbl">The problem</div><div class="ptext">${P.text}</div></section>`}
 function render(){
   if(i>=N) return finish();
   const s=P.steps[i];
-  app.innerHTML=head()+tracker()+`<div class="kicker">Step ${i+1} of ${N} · ${s.label}</div><div class="q">${s.q}</div><div id="chs">${s.choices.map((c,k)=>`<button class="ch" data-k="${k}"><span class="L">${"ABCD"[k]}</span><span class="body">${c.html}</span></button>`).join("")}</div><div id="fb"></div>`;
+  app.innerHTML=head()+tracker()+`<section class="card qcard"><div class="lbl">Step ${i+1} of ${N} · ${s.label}</div><div class="q">${s.q}</div></section><div id="chs" class="choices">${s.choices.map((c,k)=>`<button class="ch" data-k="${k}"><span class="L">${"ABCD"[k]}</span><span class="body">${c.html}</span></button>`).join("")}</div><div id="fb"></div>`;
   app.querySelectorAll(".ch").forEach(b=>b.onclick=()=>pick(+b.dataset.k));
   window.scrollTo(0,0);
 }
