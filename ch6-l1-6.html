@@ -4,8 +4,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><span class="tnav"><span class="pof">Problem 1 of 6</span><a href="ch6-l1-iv1.html">Next ›</a></span><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
 <main id="app"></main>
+<nav class="pnav"><div class="pof2">Problem 1 of 6</div><div class="prow"><a href="ch6-l1-iv1.html" class="pbtn">Next problem ›</a></div></nav>
 <script>
 function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
 window.PROBLEM = {
