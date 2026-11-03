@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The I.Q. Formula · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l2-11",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 2",
+ "number": "Set III, #11 (p. 210)",
+ "title": "The I.Q. Formula",
+ "text": "Psychologists use the formula <b>i = 100m / c</b> to measure a person's intelligence. Called the intelligence quotient, or I.Q., <b>i</b> is expressed in terms of <b>m</b>, the person's mental age, and <b>c</b>, his or her chronological age (number of years lived).<br>a) Find the I.Q. of someone whose mental age is 18 and chronological age is 15. b) Solve the formula for m in terms of i and c. c) Check part a in your part b formula, letting m = 18 and c = 15. d) Solve the formula you wrote in part b for c in terms of i and m.",
+ "tracker": [
+  "Substitute",
+  "Solve for m",
+  "Check",
+  "Solve for c",
+  "Final form",
+  "Done"
+ ],
+ "steps": [
+  {
+   "label": "Substitute",
+   "q": "a) m = 18, c = 15. What is i?",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "83.3",
+     "why": "That's 100 · 15 ÷ 18: m and c are swapped. m (18) goes on top."
+    },
+    {
+     "html": "270",
+     "why": "Check the division: 100 × 18 = 1,800, and 1,800 ÷ 15 = 120, not 270."
+    },
+    {
+     "html": "1.2",
+     "why": "18 ÷ 15 = 1.2, but you forgot to multiply by 100."
+    },
+    {
+     "html": "120",
+     "why": ""
+    }
+   ],
+   "right": "i = 100(18)/15 = 1800/15 = <b>120</b>."
+  },
+  {
+   "label": "Solve for m",
+   "q": "b) In i = 100m/c, m is multiplied by 100 and divided by c. Which is m alone?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "m = 100c/i",
+     "why": "That's the formula for c, swapped. Let's get m first."
+    },
+    {
+     "html": "m = ic/100",
+     "why": ""
+    },
+    {
+     "html": "m = 100i/c",
+     "why": "Multiplying by 100 again doesn't undo it. Undo × 100 by dividing by 100."
+    },
+    {
+     "html": "m = i − 100 + c",
+     "why": "Undo multiplication and division with division and multiplication, not subtraction and addition."
+    }
+   ],
+   "right": "Multiply both sides by c: ic = 100m. Divide by 100: <b>m = ic/100</b>."
+  },
+  {
+   "label": "Check",
+   "q": "c) Use i = 120 (from part a) and c = 15 in m = ic/100. What's m?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "18 ✔",
+     "why": ""
+    },
+    {
+     "html": "1,800",
+     "why": "120 × 15 = 1800, but then divide by 100."
+    },
+    {
+     "html": "12.5",
+     "why": "That's 100·15/120, which is the c-style formula. Use m = ic/100."
+    },
+    {
+     "html": "8",
+     "why": "Recheck: 120 × 15 = 1800, and 1800 ÷ 100 = 18."
+    }
+   ],
+   "right": "m = (120)(15)/100 = 1800/100 = <b>18</b>, which matches part a. ✔"
+  },
+  {
+   "label": "Solve for c",
+   "q": "d) Start from ic = 100m (or m = ic/100). How do you get c alone?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "Subtract i from both sides",
+     "why": "i <b>multiplies</b> c, so undo it by dividing by i."
+    },
+    {
+     "html": "Multiply both sides by i",
+     "why": "That gives i²c, which moves away from c alone."
+    },
+    {
+     "html": "Divide both sides of ic = 100m by i",
+     "why": ""
+    },
+    {
+     "html": "Divide both sides by 100",
+     "why": "That gives ic/100 = m. c is still attached to i."
+    }
+   ],
+   "right": "ic = 100m → divide by i → c = 100m/i."
+  },
+  {
+   "label": "Final form",
+   "q": "Which formula gives c in terms of i and m?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "c = im/100",
+     "why": "Check with i = 120, m = 18: 120·18/100 = 21.6, not 15."
+    },
+    {
+     "html": "c = 100m/i",
+     "why": ""
+    },
+    {
+     "html": "c = 100i/m",
+     "why": "Check: 100·120/18 ≈ 667, not 15. m goes on top."
+    },
+    {
+     "html": "c = i/(100m)",
+     "why": "Check: 120/1800 ≈ 0.07, not 15."
+    }
+   ],
+   "right": "<b>c = 100m/i</b>. Check: 100(18)/120 = 1800/120 = 15 ✔"
+  }
+ ],
+ "solution": [
+  "a) i = 100(18)/15 = 1800/15 = <b>120</b>",
+  "b) i = 100m/c → multiply by c: ic = 100m → divide by 100: <b>m = ic/100</b>",
+  "c) m = (120)(15)/100 = 1800/100 = <b>18</b> ✔",
+  "d) ic = 100m → divide by i: <b>c = 100m/i</b>",
+  "Check d: c = 100(18)/120 = 15 ✔",
+  "Solving a formula for a letter means undoing what's being done to that letter."
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lindbergh's Flight · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l2-3",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 2",
+ "number": "Set I, #3 (p. 209)",
+ "title": "Lindbergh's Flight",
+ "text": "Charles Lindbergh, the first person to make a solo flight across the Atlantic Ocean, took <b>33.5 hours</b> to complete the trip. If he had gone <b>26 miles per hour faster</b>, the flight would have taken <b>27 hours</b>. Find out how far the flight was. Let <b>x</b> represent Lindbergh's actual speed.",
+ "tracker": [
+  "Table",
+  "Link",
+  "Equation",
+  "Solve",
+  "Distance",
+  "Check"
+ ],
+ "steps": [
+  {
+   "label": "Table",
+   "q": "Which Rate | Time | Distance table is right?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": tbl([["Actual", "x", "27", "27x"], ["Faster", "x + 26", "33.5", "33.5(x + 26)"]]),
+     "why": "The faster trip gets the <b>shorter</b> time. Going faster means 27 hours, not 33.5."
+    },
+    {
+     "html": tbl([["Actual", "x", "33.5", "33.5x"], ["Faster", "x + 26", "27", "27(x + 26)"]]),
+     "why": ""
+    },
+    {
+     "html": tbl([["Actual", "x", "33.5", "33.5x"], ["Faster", "26x", "27", "27 · 26x"]]),
+     "why": "“26 mph faster” means you <b>add</b> 26 to the rate, x + 26, not multiply."
+    },
+    {
+     "html": tbl([["Actual", "x", "33.5", "33.5x"], ["Faster", "x − 26", "27", "27(x − 26)"]]),
+     "why": "Faster means x <b>+</b> 26, not x − 26."
+    }
+   ],
+   "right": "Actual: rate x, time 33.5, distance 33.5x. Faster: rate x + 26, time 27, distance 27(x + 26)."
+  },
+  {
+   "label": "Link",
+   "q": "What is the same for both trips?",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "The times",
+     "why": "The times are different: 33.5 vs 27 hours."
+    },
+    {
+     "html": "The rates",
+     "why": "The faster trip is 26 mph faster, so the rates differ."
+    },
+    {
+     "html": "The distances add to a total",
+     "why": "He makes one trip across the Atlantic; there's no total of two trips."
+    },
+    {
+     "html": "The distances",
+     "why": ""
+    }
+   ],
+   "right": "It's the same ocean crossing either way, so the <b>distances are equal</b>."
+  },
+  {
+   "label": "Equation",
+   "q": "Which equation fits?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "33.5x = 27(x + 26)",
+     "why": ""
+    },
+    {
+     "html": "27x = 33.5(x + 26)",
+     "why": "Each time is paired with the wrong rate. The slower actual speed x goes with the longer time, 33.5."
+    },
+    {
+     "html": "33.5x = 27x + 26",
+     "why": "The 26 has to be multiplied by 27 too: 27(x + 26) = 27x + 702."
+    },
+    {
+     "html": "33.5x + 27(x + 26) = 3600",
+     "why": "We don't know the distance, and the distances are equal, not added."
+    }
+   ],
+   "right": "Actual distance = faster distance: <b>33.5x = 27(x + 26)</b>."
+  },
+  {
+   "label": "Solve",
+   "q": "Solve for x.",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "x = 4",
+     "why": "26 ÷ 6.5 = 4, but you forgot to multiply 26 by 27 first."
+    },
+    {
+     "html": "x = 134",
+     "why": "134 is the <b>faster</b> speed, x + 26."
+    },
+    {
+     "html": "x = 108",
+     "why": ""
+    },
+    {
+     "html": "x = 702",
+     "why": "702 is 27 × 26. You still need to divide by 6.5."
+    }
+   ],
+   "right": "33.5x = 27x + 702 → 6.5x = 702 → <b>x = 108 mph</b>."
+  },
+  {
+   "label": "Distance",
+   "q": "How long was the flight?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "108 miles",
+     "why": "108 is the speed. Distance = rate × time."
+    },
+    {
+     "html": "3,618 miles",
+     "why": ""
+    },
+    {
+     "html": "2,916 miles",
+     "why": "That's 27 × 108, which pairs the short time with the slow speed."
+    },
+    {
+     "html": "4,489 miles",
+     "why": "That's 33.5 × 134, the slow trip's time with the fast speed."
+    }
+   ],
+   "right": "33.5 × 108 = <b>3,618 miles</b>."
+  }
+ ],
+ "solution": [
+  "x = actual speed; faster speed = x + 26",
+  "Actual: 33.5x &nbsp;&nbsp; Faster: 27(x + 26)",
+  "Same distance: <b>33.5x = 27(x + 26)</b>",
+  "33.5x = 27x + 702 → 6.5x = 702 → <b>x = 108 mph</b>",
+  "Distance: 33.5 × 108 = <b>3,618 miles</b>",
+  "Check: 27 × 134 = 3,618 ✔"
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>

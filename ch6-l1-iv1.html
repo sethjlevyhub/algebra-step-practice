@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ollie's Records · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l1-iv1",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 1",
+ "number": "Set IV, #1 (p. 205)",
+ "title": "Ollie's Records",
+ "text": "Obtuse Ollie went to a swap meet. He bought some B. Bumble and the Stingers records, some for <b>35 cents</b> each and the rest for <b>45 cents</b> each. He spent <b>$4.25</b> altogether. Can you figure out how many records Ollie bought? Explain.",
+ "tracker": [
+  "Variables",
+  "Equation",
+  "Simplify",
+  "Search",
+  "Answer",
+  "Check"
+ ],
+ "steps": [
+  {
+   "label": "Variables",
+   "q": "What should the two variables stand for?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "x = 35, y = 45",
+     "why": "35 and 45 are prices we already know. Variables stand for what we <b>don't</b> know."
+    },
+    {
+     "html": "x = number of 35¢ records, y = number of 45¢ records",
+     "why": ""
+    },
+    {
+     "html": "x = total records, y = total money",
+     "why": "The total money is given ($4.25). We don't know how the records split between the two prices."
+    },
+    {
+     "html": "x = cents spent on 35¢ records only",
+     "why": "That's possible but awkward. Counting records makes the equation simpler."
+    }
+   ],
+   "right": "We don't know how many of each kind he bought, so let <b>x</b> = number of 35¢ records and <b>y</b> = number of 45¢ records."
+  },
+  {
+   "label": "Equation",
+   "q": "Which equation matches what he spent? (Work in cents.)",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "35x + 45y = 4.25",
+     "why": "Mixed units: 35 and 45 are cents but 4.25 is dollars. $4.25 = 425 cents."
+    },
+    {
+     "html": "x + y = 425",
+     "why": "That adds records, not money. Each record's price has to multiply its count."
+    },
+    {
+     "html": "45x + 35y = 425",
+     "why": "Prices are swapped: x is the 35¢ records, so it gets 35."
+    },
+    {
+     "html": "35x + 45y = 425",
+     "why": ""
+    }
+   ],
+   "right": "Cost = price × number for each kind, then add: <b>35x + 45y = 425</b>."
+  },
+  {
+   "label": "Simplify",
+   "q": "Every number is a multiple of 5. Dividing by 5 gives:",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "7x + 9y = 85",
+     "why": ""
+    },
+    {
+     "html": "7x + 9y = 425",
+     "why": "Divide <b>every</b> term by 5, including the 425: 425 ÷ 5 = 85."
+    },
+    {
+     "html": "7x + 45y = 85",
+     "why": "You have to divide 45 by 5 too, giving 9."
+    },
+    {
+     "html": "x + y = 85",
+     "why": "Dividing by 5 turns 35 into 7 and 45 into 9, not into 1."
+    }
+   ],
+   "right": "35 ÷ 5 = 7, 45 ÷ 5 = 9, 425 ÷ 5 = 85: <b>7x + 9y = 85</b>. Smaller numbers make the search easier."
+  },
+  {
+   "label": "Search",
+   "q": "x and y must be positive whole numbers. Try y = 1, 2, 3, … and see when 85 − 9y divides evenly by 7. Which pair works?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "x = 10, y = 2",
+     "why": "7(10) + 9(2) = 88, not 85."
+    },
+    {
+     "html": "x = 4, y = 7",
+     "why": "Swapped: 7(4) + 9(7) = 28 + 63 = 91, not 85."
+    },
+    {
+     "html": "x = 7, y = 4",
+     "why": ""
+    },
+    {
+     "html": "x = 13, y = 1",
+     "why": "7(13) + 9(1) = 91 + 9 = 100, not 85."
+    }
+   ],
+   "right": "y = 1 → 76, y = 2 → 67, y = 3 → 58 (none divide by 7). y = 4 → 85 − 36 = 49 = 7 · 7, so <b>x = 7</b>. Checking y = 5 to 9 gives 40, 31, 22, 13, 4, and none of those divide by 7."
+  },
+  {
+   "label": "Answer",
+   "q": "So can we tell how many records Ollie bought?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "No, there are many possible answers",
+     "why": "Usually a two-variable equation has many solutions, but here x and y must be <b>positive whole numbers</b>, and only one pair works."
+    },
+    {
+     "html": "Yes: 11 records (7 at 35¢, 4 at 45¢)",
+     "why": ""
+    },
+    {
+     "html": "Yes: 7 records",
+     "why": "7 is just the 35¢ ones. He also bought 4 at 45¢."
+    },
+    {
+     "html": "Yes: 9 records",
+     "why": "Not supported by the equation: x + y = 7 + 4 = 11."
+    }
+   ],
+   "right": "Only (7, 4) works, so he bought <b>7 + 4 = 11 records</b>."
+  }
+ ],
+ "solution": [
+  "x = number of 35¢ records, y = number of 45¢ records",
+  "Cost in cents: <b>35x + 45y = 425</b>",
+  "Divide by 5: <b>7x + 9y = 85</b>",
+  "Try y = 1 to 9: only y = 4 gives 85 − 36 = 49, and 49 ÷ 7 = 7, so x = 7",
+  "Ollie bought <b>11 records</b>: 7 at 35¢ and 4 at 45¢",
+  "Check: 7 × 35 = 245, 4 × 45 = 180, 245 + 180 = 425¢ = $4.25 ✔"
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>

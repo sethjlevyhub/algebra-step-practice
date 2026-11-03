@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The 3y-by-x Rectangle · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l1-6",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 1",
+ "number": "Set II, #6 (p. 204–205)",
+ "title": "The 3y-by-x Rectangle",
+ "text": "A rectangle has two sides of length <b>3y</b> (top and bottom) and two sides of length <b>x</b> (left and right).<br>a) Write an expression for its perimeter. b) Write an equation stating that its perimeter is 30. Then decide: if the perimeter is 30, can x = 3 and y = 4? Can x = 1 and y = 12?<br>f) Write an expression for its area. g) Write an equation stating that its area is 36. If the area is 36, can x = 6 and y = 3?",
+ "tracker": [
+  "Perimeter",
+  "Equation",
+  "Test pairs",
+  "Area",
+  "Test area",
+  "Check"
+ ],
+ "steps": [
+  {
+   "label": "Perimeter",
+   "q": "Perimeter means the distance all the way around. Which expression is the perimeter?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "3xy",
+     "why": "That's the <b>area</b> (length × width). Perimeter adds the four sides."
+    },
+    {
+     "html": "2x + 6y",
+     "why": ""
+    },
+    {
+     "html": "x + 3y",
+     "why": "That's only <b>two</b> of the four sides, halfway around."
+    },
+    {
+     "html": "2x + 3y",
+     "why": "You counted both x sides but only <b>one</b> 3y side. Two sides of 3y make 6y."
+    }
+   ],
+   "right": "Add all four sides: x + 3y + x + 3y = <b>2x + 6y</b>."
+  },
+  {
+   "label": "Equation",
+   "q": "Which equation says the perimeter is 30?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "2x + 6y + 30 = 0",
+     "why": "Saying the perimeter <b>is</b> 30 means the expression <b>equals</b> 30, not that it adds to 30 to make 0."
+    },
+    {
+     "html": "x + 3y = 30",
+     "why": "That says half the perimeter is 30. The full perimeter is 2x + 6y."
+    },
+    {
+     "html": "2x + 6y = 30",
+     "why": ""
+    },
+    {
+     "html": "3xy = 30",
+     "why": "3xy is the area, not the perimeter."
+    }
+   ],
+   "right": "Perimeter expression = 30, so <b>2x + 6y = 30</b>. This is an equation in two variables: many pairs (x, y) can make it true."
+  },
+  {
+   "label": "Test pairs",
+   "q": "Substitute each pair into 2x + 6y = 30. Which statement is correct?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "(3, 4) works; (1, 12) does not",
+     "why": ""
+    },
+    {
+     "html": "Both work",
+     "why": "(1, 12): 2(1) + 6(12) = 2 + 72 = 74, not 30."
+    },
+    {
+     "html": "(1, 12) works; (3, 4) does not",
+     "why": "Check again: 2(3) + 6(4) = 6 + 24 = 30 ✔, but 2(1) + 6(12) = 74 ✘."
+    },
+    {
+     "html": "Neither works",
+     "why": "2(3) + 6(4) = 6 + 24 = 30, so (3, 4) is a solution."
+    }
+   ],
+   "right": "x = 3, y = 4: 6 + 24 = <b>30 ✔</b>. x = 1, y = 12: 2 + 72 = <b>74 ✘</b>. A pair is a solution only if it makes the equation true."
+  },
+  {
+   "label": "Area",
+   "q": "Which equation says the area is 36?",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "2x + 6y = 36",
+     "why": "That's the perimeter formula. Area is length × width."
+    },
+    {
+     "html": "x + 3y = 36",
+     "why": "Area multiplies the sides; it doesn't add them."
+    },
+    {
+     "html": "3x + y = 36",
+     "why": "Area is 3y times x, which is a product: 3xy."
+    },
+    {
+     "html": "3xy = 36",
+     "why": ""
+    }
+   ],
+   "right": "Area = length × width = 3y · x = <b>3xy</b>, so the equation is <b>3xy = 36</b>."
+  },
+  {
+   "label": "Test area",
+   "q": "If the area is 36, which pair is NOT possible?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "x = 3, y = 4",
+     "why": "3(3)(4) = 36 ✔, so this pair works."
+    },
+    {
+     "html": "x = 1, y = 12",
+     "why": "3(1)(12) = 36 ✔, so this pair works. It failed the perimeter test, but it passes the area test."
+    },
+    {
+     "html": "x = 6, y = 3",
+     "why": ""
+    },
+    {
+     "html": "x = 2, y = 6",
+     "why": "3(2)(6) = 36 ✔, so this pair works."
+    }
+   ],
+   "right": "3(6)(3) = <b>54</b>, not 36, so x = 6, y = 3 is not a solution of 3xy = 36."
+  }
+ ],
+ "solution": [
+  "Perimeter: x + 3y + x + 3y = <b>2x + 6y</b>",
+  "Perimeter is 30: <b>2x + 6y = 30</b>",
+  "x = 3, y = 4: 6 + 24 = 30 ✔ &nbsp;&nbsp; x = 6, y = 3: 12 + 18 = 30 ✔ &nbsp;&nbsp; x = 1, y = 12: 2 + 72 = 74 ✘",
+  "Area: 3y · x = <b>3xy</b>; area is 36: <b>3xy = 36</b>",
+  "x = 3, y = 4: 36 ✔ &nbsp;&nbsp; x = 6, y = 3: 54 ✘ &nbsp;&nbsp; x = 1, y = 12: 36 ✔",
+  "Key idea: one pair can solve one equation and not another. Always substitute and check."
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>

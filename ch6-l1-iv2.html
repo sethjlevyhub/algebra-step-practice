@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Alice's Records · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l1-iv2",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 1",
+ "number": "Set IV, #2 (p. 205)",
+ "title": "Alice's Records",
+ "text": "Acute Alice bought some Dicky Doo and the Don'ts records, some for <b>25 cents</b> each and the rest for <b>50 cents</b> each. She spent <b>$3.75</b> altogether. Can you figure out how many records Alice bought? Explain.",
+ "tracker": [
+  "Equation",
+  "Simplify",
+  "Solutions",
+  "Totals",
+  "Answer",
+  "Check"
+ ],
+ "steps": [
+  {
+   "label": "Equation",
+   "q": "Let x = number of 25¢ records and y = number of 50¢ records. Which equation fits?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "25x + 50y = 3.75",
+     "why": "Mixed units. $3.75 = 375 cents."
+    },
+    {
+     "html": "50x + 25y = 375",
+     "why": "Prices swapped: x counts the 25¢ records."
+    },
+    {
+     "html": "25x + 50y = 375",
+     "why": ""
+    },
+    {
+     "html": "x + y = 375",
+     "why": "That adds records, not cents."
+    }
+   ],
+   "right": "Price × count for each kind, added: <b>25x + 50y = 375</b>."
+  },
+  {
+   "label": "Simplify",
+   "q": "Divide every term by 25. What do you get?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "x + 2y = 15",
+     "why": ""
+    },
+    {
+     "html": "x + 2y = 375",
+     "why": "Divide the 375 too: 375 ÷ 25 = 15."
+    },
+    {
+     "html": "2x + y = 15",
+     "why": "25 ÷ 25 = 1 goes with x, and 50 ÷ 25 = 2 goes with y."
+    },
+    {
+     "html": "x + y = 15",
+     "why": "50 ÷ 25 is 2, not 1."
+    }
+   ],
+   "right": "<b>x + 2y = 15</b>. Now x = 15 − 2y."
+  },
+  {
+   "label": "Solutions",
+   "q": "Which list gives positive whole-number solutions (x, y)?",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "Only (7, 4)",
+     "why": "(7, 4) works (7 + 8 = 15), but it's not the only one. Try y = 1, 2, 3…"
+    },
+    {
+     "html": "(15, 0) and (0, 7.5)",
+     "why": "She bought <b>some</b> of each, so neither can be 0, and you can't buy half a record."
+    },
+    {
+     "html": "(14, 1), (13, 2), (12, 3)",
+     "why": "These don't fit: 14 + 2(1) = 16, not 15."
+    },
+    {
+     "html": "(13, 1), (11, 2), (9, 3), (7, 4), (5, 5), (3, 6), (1, 7)",
+     "why": ""
+    }
+   ],
+   "right": "x = 15 − 2y, so y = 1 to 7 all give a positive whole x: <b>7 different solutions</b>."
+  },
+  {
+   "label": "Totals",
+   "q": "Find the total records x + y for each solution. What do you notice?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "They're all 11",
+     "why": "Check: 13 + 1 = 14, but 1 + 7 = 8. They're different."
+    },
+    {
+     "html": "They are different: 14, 13, 12, 11, 10, 9, 8",
+     "why": ""
+    },
+    {
+     "html": "They're all 15",
+     "why": "15 is the x + 2y value, not x + y."
+    },
+    {
+     "html": "Only one total is a whole number",
+     "why": "Every total is a whole number. The problem is that there are several of them."
+    }
+   ],
+   "right": "13+1 = 14, 11+2 = 13, 9+3 = 12, 7+4 = 11, 5+5 = 10, 3+6 = 9, 1+7 = 8. <b>Each solution gives a different total.</b>"
+  },
+  {
+   "label": "Answer",
+   "q": "So can you tell how many records Alice bought?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "No, it could be anywhere from 8 to 14",
+     "why": ""
+    },
+    {
+     "html": "Yes: 11, the same as Ollie",
+     "why": "11 is just one of the seven possibilities."
+    },
+    {
+     "html": "Yes: 15",
+     "why": "15 isn't a total of any solution."
+    },
+    {
+     "html": "Yes: 14, the most she could buy",
+     "why": "Nothing in the problem says she bought the most possible."
+    }
+   ],
+   "right": "Unlike Ollie's problem, this equation has <b>several</b> positive whole-number solutions, so the number of records can't be determined."
+  }
+ ],
+ "solution": [
+  "x = number of 25¢ records, y = number of 50¢ records",
+  "<b>25x + 50y = 375</b> → divide by 25 → <b>x + 2y = 15</b>",
+  "Positive whole solutions: (13,1), (11,2), (9,3), (7,4), (5,5), (3,6), (1,7)",
+  "Totals: 14, 13, 12, 11, 10, 9, 8",
+  "<b>We can't tell.</b> Alice bought between 8 and 14 records.",
+  "Compare with Ollie: his equation had only <b>one</b> whole-number solution, so his answer was certain."
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>

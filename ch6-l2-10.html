@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Library Rate Postage · Step Practice · AIC Algebra 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a href="index.html" class="back">‹ All problems</a><img src="aic-logo-round.png" alt="AIC" class="logo"></header>
+<main id="app"></main>
+<script>
+function tbl(rows){return `<table class="rtd"><tr><th></th><th>Rate</th><th>Time</th><th>Distance</th></tr>${rows.map(r=>`<tr><td class="who">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")}</table>`}
+window.PROBLEM = {
+ "id": "ch6-l2-10",
+ "chapter": "Chapter 6",
+ "lesson": "Lesson 2",
+ "number": "Set III, #10 (p. 210)",
+ "title": "Library Rate Postage",
+ "text": "In 1978 the formula for the cost of sending a package through the mail at the library rate was <b>c = 4n + 5</b>, in which <b>c</b> is the cost in cents and <b>n</b> is the weight of the package in pounds.<br>a) How much does it cost to send a package weighing 8 pounds? b) Solve the formula for n in terms of c. c) Check your answer for part a in your formula for part b, letting n = 8.",
+ "tracker": [
+  "Substitute",
+  "Undo +5",
+  "Undo ×4",
+  "Formula",
+  "Check",
+  "Done"
+ ],
+ "steps": [
+  {
+   "label": "Substitute",
+   "q": "a) Put n = 8 into c = 4n + 5. What does it cost?",
+   "correct": 2,
+   "choices": [
+    {
+     "html": "17 cents",
+     "why": "4 + 8 + 5 adds the 4. 4n means 4 <b>times</b> n."
+    },
+    {
+     "html": "52 cents",
+     "why": "That's 4(8 + 5). Multiply first: 4 × 8 = 32, then add 5."
+    },
+    {
+     "html": "37 cents",
+     "why": ""
+    },
+    {
+     "html": "45 cents",
+     "why": "Check the arithmetic: 4 × 8 = 32, and 32 + 5 = 37."
+    }
+   ],
+   "right": "c = 4(8) + 5 = 32 + 5 = <b>37 cents</b>."
+  },
+  {
+   "label": "Undo +5",
+   "q": "b) To get n alone in c = 4n + 5, what's the first step?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "Subtract 5 from both sides: c − 5 = 4n",
+     "why": ""
+    },
+    {
+     "html": "Divide both sides by 4 first: c ÷ 4 = n + 5",
+     "why": "You'd have to divide the 5 too (giving n + 5/4). Undo the + 5 first so you don't have to."
+    },
+    {
+     "html": "Subtract 4 from both sides: c − 4 = n + 5",
+     "why": "The 4 multiplies n, so you undo it by dividing, not subtracting."
+    },
+    {
+     "html": "Add 5 to both sides: c + 5 = 4n",
+     "why": "To undo + 5 you subtract 5. Adding gives 4n + 10 on the right."
+    }
+   ],
+   "right": "Undo operations in reverse order. The last thing done to n was + 5, so subtract 5: <b>c − 5 = 4n</b>."
+  },
+  {
+   "label": "Undo ×4",
+   "q": "Now c − 5 = 4n. Next step?",
+   "correct": 3,
+   "choices": [
+    {
+     "html": "Subtract 4: c − 9 = n",
+     "why": "4n means 4 × n. Undo multiplying by dividing."
+    },
+    {
+     "html": "Multiply by 4: 4(c − 5) = n",
+     "why": "That multiplies again instead of undoing."
+    },
+    {
+     "html": "Divide only c by 4: c/4 − 5 = n",
+     "why": "Divide the <b>whole</b> side, c − 5, by 4."
+    },
+    {
+     "html": "Divide both sides by 4: (c − 5)/4 = n",
+     "why": ""
+    }
+   ],
+   "right": "Divide both whole sides by 4: <b>n = (c − 5)/4</b>."
+  },
+  {
+   "label": "Formula",
+   "q": "Which is the finished formula for n in terms of c?",
+   "correct": 1,
+   "choices": [
+    {
+     "html": "n = 4c + 5",
+     "why": "That's the original formula with letters swapped. Solving means undoing the steps."
+    },
+    {
+     "html": "n = (c − 5)/4",
+     "why": ""
+    },
+    {
+     "html": "n = c/4 − 5",
+     "why": "Equals (c − 20)/4, not (c − 5)/4."
+    },
+    {
+     "html": "n = (c + 5)/4",
+     "why": "The 5 was added in the original, so it's subtracted here."
+    }
+   ],
+   "right": "<b>n = (c − 5)/4</b>. Now you can find a weight from a cost."
+  },
+  {
+   "label": "Check",
+   "q": "c) Use c = 37 (from part a). What does your formula give?",
+   "correct": 0,
+   "choices": [
+    {
+     "html": "n = 8 ✔",
+     "why": ""
+    },
+    {
+     "html": "n = 10.5",
+     "why": "(37 + 5)/4 = 10.5, so you used + 5. The formula subtracts 5."
+    },
+    {
+     "html": "n = 4.25",
+     "why": "37/4 − 5 = 4.25, so you divided before subtracting."
+    },
+    {
+     "html": "n = 32",
+     "why": "32 is c − 5. You still need to divide by 4."
+    }
+   ],
+   "right": "(37 − 5)/4 = 32/4 = <b>8</b>, so we get back the 8 pounds we started with. ✔"
+  }
+ ],
+ "solution": [
+  "a) c = 4(8) + 5 = 32 + 5 = <b>37 cents</b>",
+  "b) c = 4n + 5",
+  "Subtract 5: c − 5 = 4n",
+  "Divide by 4: <b>n = (c − 5)/4</b>",
+  "c) n = (37 − 5)/4 = 32/4 = <b>8</b> ✔",
+  "Solving a formula means undoing its operations in reverse order."
+ ]
+};
+</script>
+<script src="engine.js"></script></body></html>
